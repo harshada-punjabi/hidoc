@@ -247,8 +247,6 @@ class ArticleView extends StatelessWidget {
                             'Social Network for doctors- A special feature on Hidoc Dr',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 14),
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
                           ),
                           trailing: ElevatedButton(onPressed: (){},style: ButtonStyle(
                             backgroundColor: MaterialStateProperty.all<Color>(Colors.orange.shade300),
