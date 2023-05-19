@@ -113,7 +113,8 @@ class ArticleView extends StatelessWidget {
                             child: Card(
                               child: Column(
                                 children: [
-                                  SizedBox(
+                                  Container(
+                                    color: Colors.grey.withOpacity(0.4),
                                     height:
                                     MediaQuery.of(context).size.height * 0.18,
                                     child:const Center(
