@@ -27,10 +27,7 @@ class ArticleRemoteDataSourceImp implements ArticleRemoteDataSource {
     final response = await client
         .post(Uri.parse( 'http://devapi.hidoc.co:8080/HidocWebApp/api/getArticlesByUid?'),
         headers: {
-          // 'Contert-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*', // Required for CORS support to work
-          'Access-Control-Allow-Credentials': 'true',
-          'Contert-Type':'application/json',
+          // 'Access-Control-Allow-Origin':'*'
         },
         body: {
           'sId': '500',

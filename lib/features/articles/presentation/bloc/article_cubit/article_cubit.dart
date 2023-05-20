@@ -4,6 +4,7 @@ import '../../../../../core/error/failure.dart';
 import '../../../domain/entities/article_entity.dart';
 import '../../../domain/usecases/article_usecase.dart';
 import 'article_state.dart';
+import 'package:intl/intl.dart';
 
 
 
@@ -56,6 +57,16 @@ class ArticleCubit extends Cubit<ArticleState> {
       articles = character;
       emit(ArticleLoaded(articles));
     });
+  }
+
+  String formatDate(String dateString) {
+    final inputFormat = DateFormat('yyyy-MM-dd HH:mm:ss');
+    final outputFormat = DateFormat('dd MMMM yyyy');
+
+    final DateTime dateTime = inputFormat.parse(dateString);
+    final String formattedDate = outputFormat.format(dateTime);
+
+    return formattedDate;
   }
 
   String _mapFailurToMessage(Failure failure) {
